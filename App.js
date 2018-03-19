@@ -8,22 +8,18 @@ import {
   View
 } from "react-native";
 
+import SearchInput from "./components/SearchInput";
+
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
+      <KeyboardAvoidingView style={styles.container} behavior="padding">
         <Text style={styles.city}>Ottawa</Text>
         <Text style={styles.weather}>Sunny</Text>
         <Text style={styles.temperature}>24c</Text>
 
-        <TextInput
-          autoCorrect={false}
-          placeholder="Search any city"
-          placeholderTextColor="white"
-          styles={styles.testInput}
-          clearButton="always"
-        />
-      </View>
+        <SearchInput />
+      </KeyboardAvoidingView>
     );
   }
 }
