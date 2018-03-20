@@ -9,15 +9,43 @@ import {
 } from "react-native";
 
 export default class SearchInpu extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      text: ""
+    };
+  }
+
+  handleChangeText = text => {
+    this.setState({ text });
+    console.log(this.state);
+  };
+
+  handleSubmitEditing = () => {
+    const { onSubmit } = this.props;
+    const { text } = this.state;
+
+    if (!text) return;
+
+    onSubmit(text);
+    this.setState({ text: "" });
+  };
+
   render() {
+    const { placeholder } = this.props;
+    const { text } = this.state;
     return (
-      <TextInput
-        autoCorrect={false}
-        placeholder="Search any city"
-        placeholderTextColor="white"
-        style={styles.textInput}
-        clearButton="always"
-      />
+      <View style={styles.container}>
+        <TextInput
+          autoCorrect={false}
+          placeholder="Search any city"
+          placeholderTextColor="white"
+          style={styles.textInput}
+          clearButton="always"
+          onChangeText={this.handleChangeText}
+          onSubmitEditing={this.handleSubmitEditing}
+        />
+      </View>
     );
   }
 }
