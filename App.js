@@ -29,7 +29,7 @@ export default class App extends React.Component {
   }
 
   componentDidMount() {
-    this.handleUpdateLocation("Madrid");
+    this.handleUpdateLocation("New York");
   }
 
   handleUpdateLocation = async city => {
@@ -118,8 +118,8 @@ const styles = StyleSheet.create({
   detailsContainer: {
     flex: 1,
     justifyContent: "center",
-    backgroundColor: "rgba(0,0,0,0.2)",
-    paddingHorizontal: 20
+
+    paddingHorizontal: 30
   },
   city: {
     textAlign: "center",
