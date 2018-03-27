@@ -52,13 +52,17 @@ export default class SearchInpu extends React.Component {
 
 const styles = StyleSheet.create({
   textInput: {
-    backgroundColor: "#666",
+    backgroundColor: "black",
     color: "white",
     height: 40,
     width: 300,
-    marginTop: 20,
+    marginTop: 50,
     marginHorizontal: 20,
     paddingHorizontal: 10,
     alignItems: "center"
+  },
+  container: {
+    alignItems: "center",
+    justifyContent: "center"
   }
 });
