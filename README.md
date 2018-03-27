@@ -10,7 +10,7 @@ Choose your city and check the weather with some pixel art on the background.
 
 ## [PixlWeather](https://dedd.co)
 
-![PixlWeather](/images/pixlweather.png?raw=true "PixlWeather")
+![PixlWeather](/images/pixlweather.png "PixlWeather")
 
 ## Built With
 
